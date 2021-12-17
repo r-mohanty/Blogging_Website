@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <div align='center'>
+    <h1>Enter your credentials to join the world of Heros!!</h1>
+  </div>
+  <div class="container">
+    <form method="post">
+      {{form.hidden_tag()}}
+      <div class="form-group">
+        {{form.email.label(class='form-group')}}
+        {{form.email(class='form-control')}}
+      </div>
+
+      <div class="form-group">
+        {{form.username.label(class='form-group')}}
+        {{form.username(class='form-control')}}
+      </div>
+
+      <div class="form-group">
+        {{form.password.label(class='form-group')}}
+        {{form.password(class='form-control')}}
+      </div>
+
+      <div class="form-group">
+        {{form.pass_confirm.label(class='form-group')}}
+        {{form.pass_confirm(class='form-control')}}
+      </div>
+
+      <div class="form-group">
+        {{form.submit(class='btn btn-primary')}}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
